@@ -81,8 +81,8 @@
 
             <!-- Contribute -->
             <li{% if page.url contains '/contributing/how-to-contribute.html' %} class="active"{% endif %}><a href="{{ baseurl_i18n }}/contributing/how-to-contribute.html">{{ site.data.i18n[page.language].how_to_contribute }}</a></li>
-            {% if page.url contains '/contributing/' %}
-            <ul class="nav navbar-nav navbar-subnav">
+            {% if page.url contains '/contributing/' %} 
+            <ul style="float: none" class="nav navbar-nav">
               <li>
                   <a href="{{ baseurl_i18n }}/contributing/contribute-code.html">{{ site.data.i18n[page.language].contribute_code }}</a>
               </li>

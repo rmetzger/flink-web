@@ -81,8 +81,8 @@
 
             <!-- Contribute -->
             <li{% if page.url contains '/contributing/how-to-contribute.html' %} class="active"{% endif %}><a href="{{ baseurl_i18n }}/contributing/how-to-contribute.html">{{ site.data.i18n[page.language].how_to_contribute }}</a></li>
-            {% if page.url contains '/contributing/' %} 
-            <ul style="margin-left: 0px;list-style: none;font-weight: bold;">
+            {% if page.url contains '/contributing/' %}
+            <ul class="nav navbar-nav navbar-subnav">
               <li>
                   <a href="{{ baseurl_i18n }}/contributing/contribute-code.html">{{ site.data.i18n[page.language].contribute_code }}</a>
               </li>
@@ -114,8 +114,8 @@
                 {% if page.url contains '/blog/' or page.url contains '/news/' or page.url contains '/features/' %}
                   <!-- link to the Chinese home page when current is blog page -->
                   <a href="{{ site.baseurl }}/zh">中文版</a>
-                {% else %} 
-                  <a href="{{ site.baseurl }}/zh{{ page.url }}">中文版</a>   
+                {% else %}
+                  <a href="{{ site.baseurl }}/zh{{ page.url }}">中文版</a>
                 {% endif %}
               {% else %}
                 <a href="{{ site.baseurl }}{{ page.url | remove_first: 'zh/' }}">English</a>
